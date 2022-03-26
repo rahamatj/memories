@@ -1,9 +1,10 @@
 import express from "express"
 
-import postController from "../controllers/postController.js"
+import PostController from "../controllers/PostController.js"
 
 const router = express.Router()
 
-router.get("/", postController.getPosts)
+router.get("/", PostController.getPosts)
+router.post("/", PostController.createPost)
 
 export default router
